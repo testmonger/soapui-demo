@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bee06bb8-16b3-4c50-b343-9aaa43162d57" activeEnvironment="Default" name="SOAPUI-Capabilities-Demo" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:description>SOAPUI-Capabilities-Demo</con:description><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="Person-Weather-TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="Person-Weather-Test-Map"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="21c4378d-4cd2-428a-bdac-491a86476a09" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.openweathermap.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://api.openweathermap.org</con:endpoint></con:endpoints><con:resource name="" path="/weather" id="25614fd3-896e-4e6b-8358-a715c79d691c"><con:settings/><con:parameters><con:parameter><con:name>q</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>APPID</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>units</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="1" id="dce536d9-9016-4307-8f10-3dc03da2323c" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401 404 400</con:status><con:params/><con:element xmlns:api="https://openweathermap.org/api">api:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:api="https://openweathermap.org/api">api:Response</con:element></con:representation><con:request name="Request 1" id="8f2b21fe-dd0b-48c1-a9fb-f501077cae5b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org/data/2.5/</con:endpoint><con:request/><con:originalUri>https://openweathermap.org/api</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Orlando"/>
+  <con:entry key="APPID" value="d8f53409a7fe7e9b7d24749f40c96629"/>
+  <con:entry key="units" value="imperial"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>APPID</con:entry><con:entry>units</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="53f28ed7-e34c-4a80-91f0-9e66091bb9c0" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.twilio.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://api.twilio.com</con:endpoint></con:endpoints><con:resource name="Messages.json" path="/2010-04-01/Accounts/AC81f9a0be4afb44f661643ee9041e9eae/Messages.json" id="b482bed8-3359-4dd1-b021-ecbdb0691d6f"><con:settings/><con:parameters><con:parameter><con:name>To</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>from</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Messages.json 1" id="3f1bad0e-22d5-4ac4-a173-79643a20a674" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401 400</con:status><con:params/><con:element xmlns:mes="https://api.twilio.com/2010-04-01/Accounts/AC491dfab1147bac611316ea271349e2b5/Messages.json">mes:Fault</con:element></con:representation><con:request name="Request 1" id="3e2d016d-87e3-4057-9e62-534ce415e79c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.twilio.com</con:endpoint><con:request>{
+  "body": "This is the ship that made the Kessel Run in fourteen parsecs?",
+  "from": +12027953213
+}</con:request><con:originalUri>https://api.twilio.com/2010-04-01/Accounts/AC491dfab1147bac611316ea271349e2b5/Messages.json</con:originalUri><con:credentials><con:username>AC81f9a0be4afb44f661643ee9041e9eae</con:username><con:password>057a8b80d9fba19d9f3d3a700b06e89d</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="from" value="+12027953213"/>
+  <con:entry key="To" value="+14696674343"/>
+</con:parameters><con:parameterOrder><con:entry>To</con:entry><con:entry>from</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="f413fbaf-f3ac-47e8-bda6-e25be427ca33" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.txtlocal.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://api.txtlocal.com</con:endpoint></con:endpoints><con:resource name="Send" path="/send/" id="5f56556f-0ec3-4c70-b82e-2f01eb8eed10"><con:settings/><con:parameters><con:parameter><con:name>sender</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>message</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>apiKey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>numbers</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>test</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Send 1" id="beecbd20-04cb-4e92-a385-30c8e0f6f56d" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:send="https://api.txtlocal.com/send/">send:Response</con:element></con:representation><con:request name="Request 1" id="256fc3d4-5100-4004-8303-19cfe9137a85" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.txtlocal.com</con:endpoint><con:request/><con:originalUri>https://api.txtlocal.com/send/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="apiKey" value="qqCVJaG1vhY-4YrXSmEl949Dd3OOVkwyPz7cjiS4F2"/>
+  <con:entry key="test" value="true"/>
+  <con:entry key="sender" value="Test Monger"/>
+  <con:entry key="numbers" value="14696674343"/>
+  <con:entry key="message" value="Hi Name. The temp in your home city right now id x degrees F."/>
+</con:parameters><con:parameterOrder><con:entry>sender</con:entry><con:entry>message</con:entry><con:entry>apiKey</con:entry><con:entry>numbers</con:entry><con:entry>test</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="get_history_single" path="/get_history_single/" id="3ce8e802-46cd-4f94-8003-f0e61b6dcdf8"><con:settings/><con:parameters><con:parameter><con:name>apiKey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="c80cf9b3-c10a-426b-9f29-a7d35ae48ac5" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="https://api.txtlocal.com/get_history_single/">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="e0ad2743-3abd-4bb8-977c-d4baed04b8dc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.txtlocal.com</con:endpoint><con:request/><con:originalUri>https://api.txtlocal.com/get_history_single/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="apiKey" value="qqCVJaG1vhY-4YrXSmEl949Dd3OOVkwyPz7cjiS4F2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>apiKey</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="e62869ce-a944-4d38-8e1a-c3f85c8129a8" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://rest.nexmo.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://rest.nexmo.com</con:endpoint></con:endpoints><con:resource name="Json" path="/sms/json" id="47f540b9-1311-47cf-96fe-6fb8fc8dbb18"><con:settings/><con:parameters/><con:method name="Json 1" id="a2f30d10-6ca5-451a-99ee-a238bf422fbb" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:json="https://rest.nexmo.com/sms/json">json:Response</con:element></con:representation><con:request name="Request 1" id="877944fa-2f1c-4920-bc93-7bb113459b09" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://rest.nexmo.com</con:endpoint><con:request>    {
+		"api_key": "6a382b96",
+		"api_secret": "emNupw0YEVQa3W4y",
+        	"from": 19174645738 ,
+        	"to": 14696674343,
+        	"text": "Hi -name-, the local temo is -x- deg F in your home town.",
+    }</con:request><con:originalUri>https://rest.nexmo.com/sms/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="dd68cf3d-21ba-445c-9001-7f9e174409b0" name="Person-Weather-TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ec3206ba-0657-4e42-878e-505fd2844529" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Person-Weather-Test" searchProperties="true"><con:settings/><con:testStep type="groovy" name="API-Notes" id="d56e3897-94dd-460d-8087-29bc0d4865d5"><con:settings/><con:config><script>/* weather info
+ * openweathermap.org
+ * api key = d8f53409a7fe7e9b7d24749f40c96629
+ * example:
+ * http://api.openweathermap.org/data/2.5/weather?q=London,uk&amp;APPID=d8f53409a7fe7e9b7d24749f40c96629
+ *
+ * sms api
+ * nexmo -- vonage
+ */
+log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+</script></con:config></con:testStep><con:testStep type="groovy" name="Get-Properties" id="b2e5ebd6-15d9-416b-8e7d-c3beecd19737"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+import com.eviware.soapui.impl.rest.RestMethod
+import com.eviware.soapui.impl.rest.RestRequestInterface.HttpMethod
+import com.eviware.soapui.impl.rest.RestResource
+import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+
+//
+//http://stackoverflow.com/questions/39229462/soapui-export-and-import-properties-to-file-by-script/39240253#39240253
+/*
+ * this method imports properties to a test case from a file.
+ * @param context
+ * @param filePath
+ */
+def importPropertiesToTestCase(def context,String filePath) {
+    def props = new Properties()
+    def propFile = new File(filePath)
+    //load the properties files into properties object
+    props.load(propFile.newDataInputStream())
+    //loop thru the properties and set them at test case level
+    props.each {
+        context.testCase.setPropertyValue(it.key, it.value.toString())
+    }
+}
+// How to use above method. Make sure you have file with properties, change path if needed.
+// get file path and name from project properties
+// example: c:/qa/tools/soapui/reservation/scenario.01.properties
+def propfile = testRunner.testCase.testSuite.project.getPropertyValue("project-home")
+propfile = propfile + testRunner.testCase.testSuite.project.getPropertyValue("prop-file")
+log.info(propfile)
+	
+importPropertiesToTestCase(context, propfile)
+
+// reinitialize test
+context.testCase.setPropertyValue("Test-Control", "START")
+
+return null
+</script></con:config></con:testStep><con:testStep type="groovy" name="Start-SQL-Server-cmd" id="e561c32e-5802-4544-8467-fcf78091d472" disabled="true"><con:settings/><con:config><script><![CDATA[/*
+def proc = "sc query MSSQLSERVER".execute()
+def b = new StringBuffer()
+proc.consumeProcessErrorStream(b)
+
+println proc.text
+println b.toString()
+*/
+
+File file = new File("C:\\tools\\soapui\\startsqlserver.bat")
+file.write "pushd %~dp0"
+file << "cd /d C:\\tools\\soapui\\\n"
+file << "net start MSSQLSERVER\n"
+file << "net user Administrator /active:yes" 
+println file.text
+
+
+def Path="C:\\tools\\soapui\\"
+def BatchFile = Path+"startsqlserver.bat"
+log.info( BatchFile )
+//runas /user:Administator "cmd.exe /C %CD%\installer.cmd %CD%"
+
+Runtime.runtime.exec( BatchFile )
+
+//def powerShellCommand = '.\\app.AdminTool.ps1 -url "https://reference1.jdm-inc.com" enqueue orchestration -file  "C:\\Program Files\\APP\\Importer\\daily_report.xml"  -properties @{ \'processing_date\' = \'2017-01-17\' }'
+//def shellCommand = "powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile  -Command \"${powerShellCommand}\""
+//def process = shellCommand.execute()
+//process.waitFor()
+//process.waitForProcessOutput(System.out, System.err)
+
+
+
+/*
+def proc = "cmd /c sc query MSSQLSERVER".split().execute().text;
+def outputStream = new StringBuffer();
+proc.waitForProcessOutput(outputStream, System.err);
+println(outputStream.toString());
+*/]]></script></con:config></con:testStep><con:testStep type="groovy" name="Groovy-SQL" id="ae038808-271a-401d-ad88-512f5a30ffa8" disabled="true"><con:settings/><con:config><script>log.info('--------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+import groovy.sql.Sql
+import com.eviware.soapui.support.GroovyUtils.*
+def dbURL = "jdbc:sqlserver://steve-laptop\\Steve:1433;databaseName=AdventureWorks2017;" 
+log.info (dbURL) 
+//context.testCase.getPropertyValue('dbURL')
+def dbUser = 'soapui' //context.testCase.getPropertyValue('dbUser')
+def dbPass = 'soapui' //context.testCase.getPropertyValue('dbPass')
+def dbDriver = 'com.microsoft.sqlserver.jdbc.SQLServerDriver' //context.testCase.getPropertyValue('dbDriver')
+
+com.eviware.soapui.support.GroovyUtils.registerJdbcDriver(dbDriver)
+
+def sql = Sql.newInstance(dbURL, dbUser, dbPass, dbDriver)
+def sstr = "select top 100 * from [AdventureWorks2017].[HumanResources].[Employee]"
+log.info(sstr)
+sql.execute(sstr)
+sql.close()
+</script></con:config></con:testStep><con:testStep type="jdbc" name="Select-Employee" id="0c922e9d-6400-46ae-aec6-18d1fbede7dd"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver><con:connectionString>jdbc:sqlserver://${#TestCase#sql-server-name};databaseName=${#TestCase#db-name};user=${#TestCase#db-user};password=${#TestCase#db-pw};</con:connectionString><con:query>SELECT TOP 10 p.BusinessEntityID, p.firstname, 
+	p.lastname, a.postalcode, a.city, 
+	ph.phonenumber
+FROM person.person as p
+JOIN person.businessentityaddress ba on ba.BusinessEntityID = p.BusinessEntityID
+JOIN person.address a on a.addressid = ba.addressid
+JOIN person.personphone ph on ph.BusinessEntityID = p.BusinessEntityID
+WHERE lower(p.firstname) LIKE :fname
+  AND lower(p.lastname) LIKE :lname
+</con:query><con:storedProcedure>false</con:storedProcedure><con:assertion type="XPath Match" id="f1959638-55b5-430d-9b3b-a3946f8e5bd5" name="XPath Match"><con:configuration><path>//*:FIRSTNAME</path><content>${#TestCase#firstname}</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JDBC Status" id="cb52d618-c36f-4080-8d6b-26bed95f691d" name="JDBC Status"/><con:properties><con:property><con:name>fname</con:name><con:value>${#TestCase#firstname}</con:value></con:property><con:property><con:name>lname</con:name><con:value>${#TestCase#lastname}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Parse-Employee-JDBC" id="5d0a5d23-c54e-4ffb-8093-0cfd363e88ca"><con:settings/><con:config><script><![CDATA[log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+//testRunner.testCase.testSteps["Get-Weather"].disabled = false
+//testRunner.testCase.testSteps["Parse-Weather"].disabled = false
+//testRunner.testCase.testSteps["Send-SMS-Temp"].disabled = false
+//testRunner.testCase.testSteps["Test-Summary"].disabled = false
+    
+import groovy.util.XmlSlurper
+//grab the expected result from jdbc response
+def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+def xml = new XmlSlurper().parseText(jdbcResponse)		//log.info(xml)
+xml.ResultSet.Row.each(){row ->
+	log.info("loopindex "+context.loopIndex)
+	log.info('BUSINESSENTITYID = ' + row.BUSINESSENTITYID + '; NAME = ' + row.FIRSTNAME + ' ' + row.LASTNAME 
+		+ '; POSTALCODE = ' + row.POSTALCODE 
+		+ '; CITY = ' + row.CITY 
+		+ '; PHONENUMBER = ' + row.PHONENUMBER
+	)
+	// set property to be used in message
+	context.testCase.setPropertyValue("full_name", row.FIRSTNAME.toString()+ ' ' + row.LASTNAME.toString())
+	// get weather for employee's zip code
+	testRunner.testCase.testSteps["Get-Weather"].setPropertyValue( "q", row.CITY.toString() )
+	testRunner.runTestStepByName( "Get-Weather" )
+	testRunner.runTestStepByName( "Parse-Weather" )
+	// send message about weather to emp
+	testRunner.runTestStepByName( "Send-SMS-Temp" )
+	// delay to prevent throughput rate error
+	Thread.currentThread().sleep(1000)	
+}
+
+// test cleanup
+testRunner.runTestStepByName( "Test-Summary" )
+
+return null
+
+/* Note: Delay included above because error from Vonage when requests sent too quickly
+ *  <Response xmlns="https://rest.nexmo.com/sms/json">
+   <message-count>1</message-count>
+   <messages>
+      <e>
+         <error-text>Throughput Rate Exceeded - please wait [ 606 ] and retry</error-text>
+         <network>310120</network>
+         <status>1</status>
+         <to>14696674343</to>
+      </e>
+   </messages>
+</Response>
+ *  
+ *  
+ */
+]]></script></con:config></con:testStep><con:testStep type="restrequest" name="Get-Weather" id="67b89565-1ef7-48f7-89f2-62d8acc3deb1"><con:settings/><con:config service="http://api.openweathermap.org" resourcePath="/weather" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get-Weather" id="8f2b21fe-dd0b-48c1-a9fb-f501077cae5b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org/data/2.5/</con:endpoint><con:request/><con:originalUri>https://openweathermap.org/api</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fcd67a57-cf53-49a2-8cfc-37cd975aaa13" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Berkeley"/>
+  <con:entry key="APPID" value="${#TestCase#weather-app-id}"/>
+  <con:entry key="units" value="imperial"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>APPID</con:entry><con:entry>units</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Parse-Weather" id="36eadfff-07ab-4ffa-8ec8-97cf345fd5e7"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: Parse Weather'
+import groovy.json.JsonSlurper
+
+def place = testRunner.testCase.getTestStepByName("Get-Weather").getPropertyValue("q")
+def responseContent = testRunner.testCase.getTestStepByName("Get-Weather").getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+
+temp = json.main.temp
+log.info('Location = ' + place + ', Temp = '+temp)
+
+assert temp > -100 : 'Temp is not GT -100'
+
+// set property to be used in message
+def fn = context.testCase.getPropertyValue("full_name")
+def msg = "Hi "+fn+", the current temp in your home town is "+temp.toString()+" F."
+log.info("SMS-Message-Text: "+msg)
+context.testCase.setPropertyValue("msg", msg)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Send-SMS" id="c71693d9-cc0d-485a-a61b-815fbe21eaa4"><con:settings/><con:config service="https://rest.nexmo.com" resourcePath="/sms/json" methodName="Json 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Send-SMS" id="877944fa-2f1c-4920-bc93-7bb113459b09" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://rest.nexmo.com</con:endpoint><con:request>{
+	"api_key": "${#TestCase#sms-api-key}",
+	"api_secret": "${#TestCase#sms-api-secret}",
+   	"from": 19174645738 ,
+   	"to": 14696674343,
+   	"text": "${#TestCase#msg}",
+}</con:request><con:originalUri>https://rest.nexmo.com/sms/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="7cc94c93-6596-48c5-b4e0-3652c890c6ab" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="26df2d3f-9770-4c9d-8b3f-73a9539494ec" name="Script Assertion"><con:configuration><scriptText>// verify and save message id
+import groovy.json.JsonSlurper
+
+def responseContent = messageExchange.response.responseContent
+//testRunner.testCase.getTestStepByName("Send-SMS-Temp").getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+//verify the slurper isn't empty
+assert !(json.isEmpty())
+assert json.messages[0].'message-id' != null : "Message id is null"
+assert json.messages[0].'status' == "0" : "Message Status not 0"
+
+def msgid = json.messages[0].'message-id'
+log.info("SMS Message-ID: "+msgid)
+context.testCase.setPropertyValue("SMS-Message-ID", msgid)
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Get-SMS-Status" id="6d47506c-1596-4d82-bb4b-a711fe5d503e" disabled="true"><con:settings/><con:config service="https://rest.nexmo.com" resourcePath="/sms/json" methodName="Json 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get-SMS-Status" id="877944fa-2f1c-4920-bc93-7bb113459b09" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://rest.nexmo.com</con:endpoint><con:request>{
+	"api_key": "6a382b96",
+	"api_secret": "emNupw0YEVQa3W4y",
+   	"from": 19174645738 ,
+   	"to": 14696674343,
+   	"text": "${#TestCase#msg}",
+}</con:request><con:originalUri>https://rest.nexmo.com/sms/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="7cc94c93-6596-48c5-b4e0-3652c890c6ab" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="26df2d3f-9770-4c9d-8b3f-73a9539494ec" name="Script Assertion"><con:configuration><scriptText>// verify and save message id
+import groovy.json.JsonSlurper
+
+def responseContent = messageExchange.response.responseContent
+//testRunner.testCase.getTestStepByName("Send-SMS-Temp").getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+//verify the slurper isn't empty
+assert !(json.isEmpty())
+ 
+assert json.messages[0].'message-id' != null
+
+def msgid = json.messages[0].'message-id'
+log.info(msgid)
+context.testCase.setPropertyValue("msgid", msgid)
+
+return null</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Test-Summary" id="5adbf7a8-6bff-43bb-83b0-7605895bdb8b"><con:settings/><con:config><script>/* 
+ *  collect assert results
+ *  write to html
+ *  send email notification
+ */
+import com.eviware.soapui.model.testsuite.TestRunner.Status
+ 
+log.info('------------------------------')
+log.info 'Step: Test-Summary'
+ 
+def String timenow = new Date(). format("yyyy-MM-dd'T'HH:mm:ss. SSSXXX")
+log.info('Test Case Completed at '+timenow)
+
+// stop execution
+//testRunner.cancel("All JDBC Records Processed");
+//testRunner.cancel()
+
+return null</script></con:config></con:testStep><con:properties><con:property><con:name>firstname</con:name><con:value>Joy</con:value></con:property><con:property><con:name>lastname</con:name><con:value>A%</con:value></con:property><con:property><con:name>f_name</con:name><con:value>Joy Alvarez</con:value></con:property><con:property><con:name>curr_temp</con:name><con:value>63.68</con:value></con:property><con:property><con:name>msg</con:name><con:value>Hi Joy Alvarez, the current temp in your home town is 55.44 F.</con:value></con:property><con:property><con:name>msgid</con:name><con:value>13000000E692A00D</con:value></con:property><con:property><con:name>sql-server-name</con:name><con:value>steve-laptop\Steve:1433</con:value></con:property><con:property><con:name>db-user</con:name><con:value>soapui</con:value></con:property><con:property><con:name>db-name</con:name><con:value>AdventureWorks2017</con:value></con:property><con:property><con:name>db-pw</con:name><con:value>soapui</con:value></con:property><con:property><con:name>weather-app-id</con:name><con:value>d8f53409a7fe7e9b7d24749f40c96629</con:value></con:property><con:property><con:name>sms-api-secret</con:name><con:value>emNupw0YEVQa3W4y</con:value></con:property><con:property><con:name>sms-api-key</con:name><con:value>6a382b96</con:value></con:property><con:property><con:name>full_name</con:name><con:value>Joy Alvarez</con:value></con:property><con:property><con:name>SMS-Message-ID</con:name><con:value>13000000E69F768F</con:value></con:property><con:property><con:name>Test-Control</con:name><con:value>START</con:value></con:property></con:properties></con:testCase><con:testCase id="e3c531e4-e61a-4d55-b595-c7a5641836bb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Person-Weather" searchProperties="true"><con:settings/><con:testStep type="groovy" name="API-Notes" id="746c04e4-97c4-417d-931a-66bdd1067519"><con:settings/><con:config><script>/* weather info
+ * openweathermap.org
+ * api key = d8f53409a7fe7e9b7d24749f40c96629
+ * example:
+ * http://api.openweathermap.org/data/2.5/weather?q=London,uk&amp;APPID=d8f53409a7fe7e9b7d24749f40c96629
+ *
+ * sms api
+ * nexmo -- vonage
+ */
+log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+</script></con:config></con:testStep><con:testStep type="groovy" name="Get-Properties" id="4d42ddd0-18f6-4ac7-8d4c-de3cf9e4ffa5"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+import com.eviware.soapui.impl.rest.RestMethod
+import com.eviware.soapui.impl.rest.RestRequestInterface.HttpMethod
+import com.eviware.soapui.impl.rest.RestResource
+import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+
+//
+//http://stackoverflow.com/questions/39229462/soapui-export-and-import-properties-to-file-by-script/39240253#39240253
+/*
+ * this method imports properties to a test case from a file.
+ * @param context
+ * @param filePath
+ */
+def importPropertiesToTestCase(def context,String filePath) {
+    def props = new Properties()
+    def propFile = new File(filePath)
+    //load the properties files into properties object
+    props.load(propFile.newDataInputStream())
+    //loop thru the properties and set them at test case level
+    props.each {
+        context.testCase.setPropertyValue(it.key, it.value.toString())
+    }
+}
+// How to use above method. Make sure you have file with properties, change path if needed.
+// get file path and name from project properties
+// example: c:/qa/tools/soapui/reservation/scenario.01.properties
+def propfile = testRunner.testCase.testSuite.project.getPropertyValue("project-home")
+propfile = propfile + testRunner.testCase.testSuite.project.getPropertyValue("prop-file")
+log.info(propfile)
+	
+importPropertiesToTestCase(context, propfile)
+
+// reinitialize test
+context.testCase.setPropertyValue("Test-Control", "START")
+
+return null
+</script></con:config></con:testStep><con:testStep type="jdbc" name="Select-Employee" id="ce86c469-91b3-4217-94c2-6369f6fd488f"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver><con:connectionString>jdbc:sqlserver://${#TestCase#sql-server-name};databaseName=${#TestCase#db-name};user=${#TestCase#db-user};password=${#TestCase#db-pw};</con:connectionString><con:query>SELECT TOP 10 p.BusinessEntityID, p.firstname, 
+	p.lastname, a.postalcode, a.city, 
+	ph.phonenumber
+FROM person.person as p
+JOIN person.businessentityaddress ba on ba.BusinessEntityID = p.BusinessEntityID
+JOIN person.address a on a.addressid = ba.addressid
+JOIN person.personphone ph on ph.BusinessEntityID = p.BusinessEntityID
+WHERE lower(p.firstname) LIKE :fname
+  AND lower(p.lastname) LIKE :lname
+</con:query><con:storedProcedure>false</con:storedProcedure><con:assertion type="XPath Match" id="f1959638-55b5-430d-9b3b-a3946f8e5bd5" name="XPath Match"><con:configuration><path>//*:FIRSTNAME</path><content>${#TestCase#firstname}</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JDBC Status" id="cb52d618-c36f-4080-8d6b-26bed95f691d" name="JDBC Status"/><con:properties><con:property><con:name>fname</con:name><con:value>${#TestCase#firstname}</con:value></con:property><con:property><con:name>lname</con:name><con:value>${#TestCase#lastname}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Parse-Employee-JDBC" id="988623f3-d1d2-4fb4-8a02-25da62df5f4e"><con:settings/><con:config><script><![CDATA[log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+//testRunner.testCase.testSteps["Get-Weather"].disabled = false
+//testRunner.testCase.testSteps["Parse-Weather"].disabled = false
+//testRunner.testCase.testSteps["Send-SMS-Temp"].disabled = false
+//testRunner.testCase.testSteps["Test-Summary"].disabled = false
+    
+import groovy.util.XmlSlurper
+//grab the expected result from jdbc response
+def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+context.testCase.setPropertyValue("jdbcResponse", jdbcResponse)
+log.info(jdbcResponse)
+/*
+def xml = new XmlSlurper().parseText(jdbcResponse)		//log.info(xml)
+xml.ResultSet.Row.each(){row ->
+	log.info("loopindex "+context.loopIndex)
+	log.info('BUSINESSENTITYID = ' + row.BUSINESSENTITYID + '; NAME = ' + row.FIRSTNAME + ' ' + row.LASTNAME 
+		+ '; POSTALCODE = ' + row.POSTALCODE 
+		+ '; CITY = ' + row.CITY 
+		+ '; PHONENUMBER = ' + row.PHONENUMBER
+	)
+	// set property to be used in message
+	context.testCase.setPropertyValue("full_name", row.FIRSTNAME.toString()+ ' ' + row.LASTNAME.toString())
+	// get weather for employee's zip code
+	testRunner.testCase.testSteps["Get-Weather"].setPropertyValue( "q", row.CITY.toString() )
+	testRunner.runTestStepByName( "Get-Weather" )
+	testRunner.runTestStepByName( "Parse-Weather" )
+	// send message about weather to emp
+	testRunner.runTestStepByName( "Send-SMS-Temp" )
+	// delay to prevent throughput rate error
+	Thread.currentThread().sleep(1000)	
+}
+
+// test cleanup
+testRunner.runTestStepByName( "Test-Summary" )
+*/
+
+return null
+
+/* Note: Delay included above because error from Vonage when requests sent too quickly
+ *  <Response xmlns="https://rest.nexmo.com/sms/json">
+   <message-count>1</message-count>
+   <messages>
+      <e>
+         <error-text>Throughput Rate Exceeded - please wait [ 606 ] and retry</error-text>
+         <network>310120</network>
+         <status>1</status>
+         <to>14696674343</to>
+      </e>
+   </messages>
+</Response>
+ *  
+ *  
+ */
+]]></script></con:config></con:testStep><con:testStep type="groovy" name="Loop-Run" id="0f374bf5-cf07-4eda-aebc-898338db570b"><con:settings/><con:config><script><![CDATA[log.info('------------------------------')
+log.info 'Step: Loop-Run'
+//+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+testRunner.testCase.testSteps["Loop-Step-1"].disabled = false
+testRunner.testCase.testSteps["Loop-Step-2"].disabled = false
+//testRunner.testCase.testSteps["Send-SMS-Temp"].disabled = false
+//testRunner.testCase.testSteps["Test-Summary"].disabled = false
+def runcount = 1
+    
+import groovy.util.XmlSlurper
+	//grab the expected result from jdbc response
+	def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+	def xml = new XmlSlurper().parseText(jdbcResponse)		//log.info(xml)
+	xml.ResultSet.Row.each(){row ->
+		log.info("---- inside result set loop")
+		log.info('BUSINESSENTITYID = ' + row.BUSINESSENTITYID + '; NAME = ' + row.FIRSTNAME + ' ' + row.LASTNAME 
+			+ '; POSTALCODE = ' + row.POSTALCODE 
+			+ '; CITY = ' + row.CITY 
+			+ '; PHONENUMBER = ' + row.PHONENUMBER
+		)
+		// set property to be used in message
+		context.testCase.setPropertyValue("full_name", row.FIRSTNAME.toString()+ ' ' + row.LASTNAME.toString())
+		// get weather for employee's zip code
+		testRunner.testCase.testSteps["Loop-Step-1"].setPropertyValue( "q", row.CITY.toString() )
+		testRunner.runTestStepByName( "Loop-Step-1" )
+		testRunner.runTestStepByName( "Loop-Step-2" )
+		// delay to prevent throughput rate error
+		log.info("run count: "+runcount++)
+		Thread.currentThread().sleep(1000)	
+	}
+
+testRunner.testCase.testSteps["Loop-Step-1"].disabled = 1
+testRunner.testCase.testSteps["Loop-Step-2"].disabled = 1
+
+return null
+
+/* Note: Sleep delay included above because error from Vonage when requests sent too quickly
+ *  <Response xmlns="https://rest.nexmo.com/sms/json">
+   <message-count>1</message-count>
+   <messages>
+      <e>
+         <error-text>Throughput Rate Exceeded - please wait [ 606 ] and retry</error-text>
+         <network>310120</network>
+         <status>1</status>
+         <to>14696674343</to>
+      </e>
+   </messages>
+</Response>
+ *  
+ *  
+ */
+]]></script></con:config></con:testStep><con:testStep type="restrequest" name="Loop-Step-1" id="7c8101d1-3085-4142-bc04-8ffee2d7ea5c"><con:settings/><con:config service="http://api.openweathermap.org" resourcePath="/weather" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Loop-Step-1" id="8f2b21fe-dd0b-48c1-a9fb-f501077cae5b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org/data/2.5/</con:endpoint><con:request/><con:originalUri>https://openweathermap.org/api</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fcd67a57-cf53-49a2-8cfc-37cd975aaa13" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Berkeley"/>
+  <con:entry key="APPID" value="${#TestCase#weather-app-id}"/>
+  <con:entry key="units" value="imperial"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>APPID</con:entry><con:entry>units</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Loop-Step-2" id="5ce58641-0ef1-4650-abe9-95f7b3f880a7"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: Parse Weather'
+import groovy.json.JsonSlurper
+
+def project = testRunner.testCase.testSuite.project
+//def place = testRunner.testCase.getTestStepByName("Loop-Step-1").getPropertyValue("q")
+def place = project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].testSteps['Loop-Step-1'].getPropertyValue("q")
+log.info('get location: '+place)
+
+//def responseContent = testRunner.testCase.getTestStepByName("Loop-Step-1").getPropertyValue("response")
+def responseContent = project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].testSteps["Loop-Step-1"].getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+
+temp = json.main.temp
+//log.info('Location = ' + place + ', Temp = '+temp)
+
+assert temp > -100 : 'Temp is not GT -100'
+
+// set property to be used in message
+def fn = context.testCase.getPropertyValue("full_name")
+def msg = "Hi "+fn+", the current temp in your home town of "+place+" is "+temp.toString()+" F."
+log.info("SMS-Message-Text: "+msg)
+context.testCase.setPropertyValue("msg", msg)
+</script></con:config></con:testStep><con:testStep type="groovy" name="Test-Summary" id="e7f92920-a5b0-4a5b-8b0e-c1da0d63104d"><con:settings/><con:config><script>/* 
+ *  collect assert results
+ *  write to html
+ *  send email notification
+ */
+import com.eviware.soapui.model.testsuite.TestRunner.Status
+ 
+log.info('------------------------------')
+log.info 'Step: Test-Summary'
+ 
+def String timenow = new Date(). format("yyyy-MM-dd'T'HH:mm:ss. SSSXXX")
+log.info('Test Case Completed at '+timenow)
+
+// stop execution
+//testRunner.cancel("All JDBC Records Processed");
+//testRunner.cancel()
+
+return null</script></con:config></con:testStep><con:properties><con:property><con:name>firstname</con:name><con:value>Joy</con:value></con:property><con:property><con:name>lastname</con:name><con:value>A%</con:value></con:property><con:property><con:name>f_name</con:name><con:value>Joy Alvarez</con:value></con:property><con:property><con:name>curr_temp</con:name><con:value>63.68</con:value></con:property><con:property><con:name>msg</con:name><con:value>Hi Joy called test Alvarez, the current temp in your home town of Berkeley is 65.03 F.</con:value></con:property><con:property><con:name>msgid</con:name><con:value>13000000E692A00D</con:value></con:property><con:property><con:name>sql-server-name</con:name><con:value>steve-laptop\Steve:1433</con:value></con:property><con:property><con:name>db-user</con:name><con:value>soapui</con:value></con:property><con:property><con:name>db-name</con:name><con:value>AdventureWorks2017</con:value></con:property><con:property><con:name>db-pw</con:name><con:value>soapui</con:value></con:property><con:property><con:name>weather-app-id</con:name><con:value>d8f53409a7fe7e9b7d24749f40c96629</con:value></con:property><con:property><con:name>sms-api-secret</con:name><con:value>emNupw0YEVQa3W4y</con:value></con:property><con:property><con:name>sms-api-key</con:name><con:value>6a382b96</con:value></con:property><con:property><con:name>full_name</con:name><con:value>Joy called test Alvarez</con:value></con:property><con:property><con:name>SMS-Message-ID</con:name><con:value>13000000E69F768F</con:value></con:property><con:property><con:name>Test-Control</con:name><con:value>START</con:value></con:property><con:property><con:name>jdbcResponse</con:name><con:value><![CDATA[<Results>
+    <ResultSet fetchSize="128">
+        <Row rowNumber="1">
+            <BUSINESSENTITYID>14043</BUSINESSENTITYID>
+            <FIRSTNAME>Joy</FIRSTNAME>
+            <LASTNAME>Alonso</LASTNAME>
+            <POSTALCODE>Y024 1GF</POSTALCODE>
+            <CITY>York</CITY>
+            <PHONENUMBER>1 (11) 500 555-0129</PHONENUMBER>
+        </Row>
+        <Row rowNumber="2">
+            <BUSINESSENTITYID>13963</BUSINESSENTITYID>
+            <FIRSTNAME>Joy</FIRSTNAME>
+            <LASTNAME>Alvarez</LASTNAME>
+            <POSTALCODE>94704</POSTALCODE>
+            <CITY>Berkeley</CITY>
+            <PHONENUMBER>225-555-0182</PHONENUMBER>
+        </Row>
+    </ResultSet>
+</Results>
+]]></con:value></con:property><con:property><con:name>q</con:name><con:value>Berkeley</con:value></con:property></con:properties></con:testCase><con:testCase id="ff7a2872-c45d-46a9-b774-daecf8bedcad" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test-Controller" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Run-Controller-Person-Weather" id="7d437c02-78ec-4759-bf28-5235ace59565"><con:settings/><con:config><script><![CDATA[/*
+ * Purpose: Define test flow in other test cases.
+ * 	Target: Person-Weather
+ */
+log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+// List the names of the test case and steps being used
+def testSuite = 'Person-Weather-TestSuite'
+def testCase = 'Person-Weather'
+def runcount = 1
+
+def project = testRunner.testCase.testSuite.project
+// get properties
+testRunner.runTestStep( project.testSuites['Person-Weather-TestSuite'].testCases['Person-Weather'].testSteps['Get-Properties'] )
+// select employee data from database
+testRunner.runTestStep( project.testSuites['Person-Weather-TestSuite'].testCases['Person-Weather'].testSteps['Select-Employee'] )
+// parse the jdbc result xml
+import groovy.util.XmlSlurper
+def jdbcr = project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].testSteps["Select-Employee"].getPropertyValue("ResponseAsXml")
+def xml = new XmlSlurper().parseText(jdbcr)		//log.info(xml)
+// perform additional processing inluding callingg test steps for each row of data returned
+xml.ResultSet.Row.each(){row ->
+	log.info("---- inside result set loop")
+	log.info('BUSINESSENTITYID = ' + row.BUSINESSENTITYID + '; NAME = ' + row.FIRSTNAME + ' ' + row.LASTNAME 
+		+ '; POSTALCODE = ' + row.POSTALCODE 
+		+ '; CITY = ' + row.CITY 
+		+ '; PHONENUMBER = ' + row.PHONENUMBER
+	)
+	// set property to be used in message
+	project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].setPropertyValue("full_name", row.FIRSTNAME.toString()+ ' called test ' + row.LASTNAME.toString())
+	//testRunner.testCase.testSteps["Loop-Step-1"].setPropertyValue( "q", row.CITY.toString() )
+	//testRunner.testCase.testSuite.testCases["Case 1"].setPropertyValue("property name", valueToSet);
+	project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].testSteps['Loop-Step-1'].setPropertyValue( "q", row.CITY.toString() )
+	//testRunner.testCase.testSuite.testCases["Case 1"].setPropertyValue("property name", valueToSet);
+	// get weather for employee's zip code
+	testRunner.runTestStep( project.testSuites['Person-Weather-TestSuite'].testCases['Person-Weather'].testSteps['Loop-Step-1'] )
+	testRunner.runTestStep( project.testSuites['Person-Weather-TestSuite'].testCases['Person-Weather'].testSteps['Loop-Step-2'] )
+	// delay to prevent throughput rate error
+	log.info("run count: "+runcount++)
+	Thread.currentThread().sleep(1000)	
+}
+return null
+
+/* Note: Sleep delay included above because error from Vonage when requests sent too quickly
+ *  <Response xmlns="https://rest.nexmo.com/sms/json">
+   <message-count>1</message-count>
+   <messages>
+      <e>
+         <error-text>Throughput Rate Exceeded - please wait [ 606 ] and retry</error-text>
+         <network>310120</network>
+         <status>1</status>
+         <to>14696674343</to>
+      </e>
+   </messages>
+</Response>
+ *  
+ *  
+ */
+]]></script></con:config></con:testStep><con:properties><con:property><con:name>sms-api-secret</con:name><con:value>emNupw0YEVQa3W4y</con:value></con:property><con:property><con:name>db-pw</con:name><con:value>soapui</con:value></con:property><con:property><con:name>db-name</con:name><con:value>AdventureWorks2017</con:value></con:property><con:property><con:name>sms-api-key</con:name><con:value>6a382b96</con:value></con:property><con:property><con:name>firstname</con:name><con:value>Joy</con:value></con:property><con:property><con:name>lastname</con:name><con:value>A%</con:value></con:property><con:property><con:name>sql-server-name</con:name><con:value>steve-laptop\Steve:1433</con:value></con:property><con:property><con:name>db-user</con:name><con:value>soapui</con:value></con:property><con:property><con:name>weather-app-id</con:name><con:value>d8f53409a7fe7e9b7d24749f40c96629</con:value></con:property><con:property><con:name>Test-Control</con:name><con:value>START</con:value></con:property><con:property><con:name>full_name</con:name><con:value>Joy called test Alonso</con:value></con:property><con:property><con:name>msg</con:name><con:value>Hi Joy called test Alonso, the current temp in your home town of Berkeley is 65.03 F.</con:value></con:property></con:properties></con:testCase><con:testCase id="09fdb846-ae2a-4571-b33b-b6462db625db" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="script-box" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Parse-Employee-JDBC-orig" id="8b109fd8-3ca9-45c8-a007-9568fe7d89cb"><con:settings/><con:config><script><![CDATA[log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+//testRunner.testCase.testSteps["Get-Weather"].disabled = false
+//testRunner.testCase.testSteps["Parse-Weather"].disabled = false
+//testRunner.testCase.testSteps["Send-SMS-Temp"].disabled = false
+//testRunner.testCase.testSteps["Test-Summary"].disabled = false
+    
+import groovy.util.XmlSlurper
+//grab the expected result from jdbc response
+def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+def xml = new XmlSlurper().parseText(jdbcResponse)		//log.info(xml)
+xml.ResultSet.Row.each(){row ->
+	log.info("loopindex "+context.loopIndex)
+	log.info('BUSINESSENTITYID = ' + row.BUSINESSENTITYID + '; NAME = ' + row.FIRSTNAME + ' ' + row.LASTNAME 
+		+ '; POSTALCODE = ' + row.POSTALCODE 
+		+ '; CITY = ' + row.CITY 
+		+ '; PHONENUMBER = ' + row.PHONENUMBER
+	)
+	// set property to be used in message
+	context.testCase.setPropertyValue("full_name", row.FIRSTNAME.toString()+ ' ' + row.LASTNAME.toString())
+	// get weather for employee's zip code
+	testRunner.testCase.testSteps["Get-Weather"].setPropertyValue( "q", row.CITY.toString() )
+	testRunner.runTestStepByName( "Get-Weather" )
+	testRunner.runTestStepByName( "Parse-Weather" )
+	// send message about weather to emp
+	testRunner.runTestStepByName( "Send-SMS-Temp" )
+	// delay to prevent throughput rate error
+	Thread.currentThread().sleep(1000)	
+}
+
+// test cleanup
+testRunner.runTestStepByName( "Test-Summary" )
+
+return null
+
+/* Note: Delay included above because error from Vonage when requests sent too quickly
+ *  <Response xmlns="https://rest.nexmo.com/sms/json">
+   <message-count>1</message-count>
+   <messages>
+      <e>
+         <error-text>Throughput Rate Exceeded - please wait [ 606 ] and retry</error-text>
+         <network>310120</network>
+         <status>1</status>
+         <to>14696674343</to>
+      </e>
+   </messages>
+</Response>
+ *  
+ *  
+ */
+]]></script></con:config></con:testStep><con:testStep type="groovy" name="get-jdbc-xml" id="6aeffcc9-1459-40ec-a666-1c17841850bf"><con:settings/><con:config><script>import groovy.util.XmlSlurper
+//grab the expected result from jdbc response
+//def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+//  
+//def jdbcResponse = ${#[Person-Weather-TestSuite#Person-Weather#Select-Employee]#ResponseAsXml}
+                                  //${#[Suite name#Case name#Step name]#Property name}                                 
+//log.info( jdbcResponse )
+def project = testRunner.testCase.testSuite.project;
+def jdbcr = project.testSuites["Person-Weather-TestSuite"].testCases["Person-Weather"].testSteps["Select-Employee"].getPropertyValue("ResponseAsXml")
+log.info( jdbcr )
+
+def xml = new XmlSlurper().parseText(jdbcr)		//log.info(xml)
+xml.ResultSet.Row.each(){row ->
+	log.info("---- inside result set loop")
+}
+return null</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6a77eaf5-8b16-4e5b-8489-485d4023ce8e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Person-Weather-Test-Map" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get-Properties" id="35dc3207-fcbe-49c4-a88c-6d156f9dc391"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+import com.eviware.soapui.impl.rest.RestMethod
+import com.eviware.soapui.impl.rest.RestRequestInterface.HttpMethod
+import com.eviware.soapui.impl.rest.RestResource
+import com.eviware.soapui.impl.wsdl.teststeps.RestTestRequestStep
+
+//
+//http://stackoverflow.com/questions/39229462/soapui-export-and-import-properties-to-file-by-script/39240253#39240253
+/*
+ * this method imports properties to a test case from a file.
+ * @param context
+ * @param filePath
+ */
+def importPropertiesToTestCase(def context,String filePath) {
+    def props = new Properties()
+    def propFile = new File(filePath)
+    //load the properties files into properties object
+    props.load(propFile.newDataInputStream())
+    //loop thru the properties and set them at test case level
+    props.each {
+        context.testCase.setPropertyValue(it.key, it.value.toString())
+    }
+}
+// How to use above method. Make sure you have file with properties, change path if needed.
+// get file path and name from project properties
+// example: c:/qa/tools/soapui/reservation/scenario.01.properties
+def propfile = testRunner.testCase.testSuite.project.getPropertyValue("project-home")
+propfile = propfile + testRunner.testCase.testSuite.project.getPropertyValue("prop-file")
+log.info(propfile)
+	
+importPropertiesToTestCase(context, propfile)
+
+// reinitialize test
+context.testCase.setPropertyValue("Test-Control", "START")
+
+return null
+</script></con:config></con:testStep><con:testStep type="jdbc" name="Select-Employee" id="9ee60a70-b6bb-4e28-a255-77a03dbadf37"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver><con:connectionString>jdbc:sqlserver://${#TestCase#sql-server-name};databaseName=${#TestCase#db-name};user=${#TestCase#db-user};password=${#TestCase#db-pw};</con:connectionString><con:query>SELECT TOP 10 p.BusinessEntityID, p.firstname, 
+	p.lastname, a.postalcode, a.city, 
+	ph.phonenumber
+FROM person.person as p
+JOIN person.businessentityaddress ba on ba.BusinessEntityID = p.BusinessEntityID
+JOIN person.address a on a.addressid = ba.addressid
+JOIN person.personphone ph on ph.BusinessEntityID = p.BusinessEntityID
+WHERE lower(p.firstname) LIKE :fname
+  AND lower(p.lastname) LIKE :lname
+</con:query><con:storedProcedure>false</con:storedProcedure><con:assertion type="XPath Match" id="f1959638-55b5-430d-9b3b-a3946f8e5bd5" name="XPath Match"><con:configuration><path>//*:FIRSTNAME</path><content>${#TestCase#firstname}</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JDBC Status" id="cb52d618-c36f-4080-8d6b-26bed95f691d" name="JDBC Status"/><con:properties><con:property><con:name>fname</con:name><con:value>${#TestCase#firstname}</con:value></con:property><con:property><con:name>lname</con:name><con:value>${#TestCase#lastname}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Parse-Employee-JDBC" id="24439963-1074-4bee-a9b9-6851c53af125"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: '+context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()
+
+testRunner.testCase.testSteps["Get-Weather"].disabled = false
+testRunner.testCase.testSteps["Parse-Weather"].disabled = false
+testRunner.testCase.testSteps["Send-SMS"].disabled = false
+testRunner.testCase.testSteps["Test-Summary"].disabled = false
+    
+import groovy.util.XmlSlurper
+//grab the expected result from jdbc response
+//def empMap = [:]
+def jdbcResponse = context.expand( '${Select-Employee#ResponseAsXml}')
+def xml = new XmlSlurper().parseText(jdbcResponse)		//log.info(xml)
+
+def empMap = xml.'**'.findAll{it.name() == 'Row'}.collect{ [
+              BUSINESSENTITYID : it.BUSINESSENTITYID.text(),
+              NAME : it.FIRSTNAME.text() + ' ' + it.LASTNAME.text(),
+              POSTALCODE : it.POSTALCODE.text(),
+              CITY : it.CITY.text()
+             ]
+          } //.sort {it.CITY}
+log.info("map: "+empMap)
+
+for (emp in empMap){ 
+	log.info("row: "+emp) 
+	// set property to be used in message
+	context.testCase.setPropertyValue("full_name", emp.NAME )
+	// get weather for employee's zip code
+	testRunner.testCase.testSteps["Get-Weather"].setPropertyValue( "q", emp.CITY.toString() )
+	testRunner.runTestStepByName( "Get-Weather" )
+	testRunner.runTestStepByName( "Parse-Weather" )
+	// delay to prevent throughput rate error
+	Thread.currentThread().sleep(1000)	
+	// send message about weather to emp
+	testRunner.runTestStepByName( "Send-SMS" )
+}
+
+// need to be able to skip over these steps since they are already run in the loop above
+testRunner.testCase.testSteps["Get-Weather"].disabled = 1
+testRunner.testCase.testSteps["Parse-Weather"].disabled = 1
+testRunner.testCase.testSteps["Send-SMS"].disabled = 1
+
+return null
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Get-Weather" id="da8b1b84-8582-426c-8f65-40d949c41ece" disabled="true"><con:settings/><con:config service="http://api.openweathermap.org" resourcePath="/weather" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get-Weather" id="8f2b21fe-dd0b-48c1-a9fb-f501077cae5b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org/data/2.5/</con:endpoint><con:request/><con:originalUri>https://openweathermap.org/api</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fcd67a57-cf53-49a2-8cfc-37cd975aaa13" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Berkeley"/>
+  <con:entry key="APPID" value="${#TestCase#weather-app-id}"/>
+  <con:entry key="units" value="imperial"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>APPID</con:entry><con:entry>units</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Parse-Weather" id="0eded67e-e686-47c6-bbb5-294dc0d32a3c" disabled="true"><con:settings/><con:config><script>log.info('------------------------------')
+log.info 'Step: Parse Weather'
+import groovy.json.JsonSlurper
+
+def place = testRunner.testCase.getTestStepByName("Get-Weather").getPropertyValue("q")
+def responseContent = testRunner.testCase.getTestStepByName("Get-Weather").getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+
+temp = json.main.temp
+//log.info('Location = ' + place + ', Temp = '+temp)
+
+assert temp > -100 : 'Temp is not GT -100'
+
+// set property to be used in message
+def fn = context.testCase.getPropertyValue("full_name")
+def msg = "Hi "+fn+", the current temp in your home town of "+ place +" is "+temp.toString()+" F."
+log.info("SMS-Message-Text: "+msg)
+context.testCase.setPropertyValue("msg", msg)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Send-SMS" id="a976dd0d-4aea-49f2-beea-fc1e108324a9" disabled="true"><con:settings/><con:config service="https://rest.nexmo.com" resourcePath="/sms/json" methodName="Json 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Send-SMS" id="877944fa-2f1c-4920-bc93-7bb113459b09" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://rest.nexmo.com</con:endpoint><con:request>{
+	"api_key": "${#TestCase#sms-api-key}",
+	"api_secret": "${#TestCase#sms-api-secret}",
+   	"from": 19174645738 ,
+   	"to": 14696674343,
+   	"text": "${#TestCase#msg}",
+}</con:request><con:originalUri>https://rest.nexmo.com/sms/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="7cc94c93-6596-48c5-b4e0-3652c890c6ab" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="26df2d3f-9770-4c9d-8b3f-73a9539494ec" name="Script Assertion"><con:configuration><scriptText>// verify and save message id
+import groovy.json.JsonSlurper
+
+def responseContent = messageExchange.response.responseContent
+//testRunner.testCase.getTestStepByName("Send-SMS-Temp").getPropertyValue("response")
+def json = new JsonSlurper().parseText(responseContent)
+//verify the slurper isn't empty
+assert !(json.isEmpty())
+assert json.messages[0].'message-id' != null : "Message id is null"
+assert json.messages[0].'status' == "0" : "Message Status not 0"
+
+def msgid = json.messages[0].'message-id'
+log.info("SMS Message-ID: "+msgid)
+context.testCase.setPropertyValue("SMS-Message-ID", msgid)
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Test-Summary" id="b31832b4-5aca-4612-9d9d-383f98c01d63"><con:settings/><con:config><script>/* 
+ *  collect assert results
+ *  write to html
+ *  send email notification
+ */
+import com.eviware.soapui.model.testsuite.TestRunner.Status
+ 
+log.info('------------------------------')
+log.info 'Step: Test-Summary'
+ 
+def String timenow = new Date(). format("yyyy-MM-dd'T'HH:mm:ss. SSSXXX")
+log.info('Test Case Completed at '+timenow)
+
+// Test Launcher: 
+/*
+cd /d C:\Program Files (x86)\SmartBear\SoapUI-5.5.0\bin\.
+cmd.exe /C testrunner.bat -sPerson-Weather-TestSuite -cPerson-Weather-Test-Map C:\tools\soapui\SOAPUI-Capabilities-Demo-soapui-project.xml
+
+ */
+return null</script></con:config></con:testStep><con:properties><con:property><con:name>firstname</con:name><con:value>Joy</con:value></con:property><con:property><con:name>lastname</con:name><con:value>A%</con:value></con:property><con:property><con:name>f_name</con:name><con:value>Joy Alvarez</con:value></con:property><con:property><con:name>curr_temp</con:name><con:value>63.68</con:value></con:property><con:property><con:name>msg</con:name><con:value>Hi Joy Alvarez, the current temp in your home town of Berkeley is 63.52 F.</con:value></con:property><con:property><con:name>msgid</con:name><con:value>13000000E692A00D</con:value></con:property><con:property><con:name>sql-server-name</con:name><con:value>steve-laptop\Steve:1433</con:value></con:property><con:property><con:name>db-user</con:name><con:value>soapui</con:value></con:property><con:property><con:name>db-name</con:name><con:value>AdventureWorks2017</con:value></con:property><con:property><con:name>db-pw</con:name><con:value>soapui</con:value></con:property><con:property><con:name>weather-app-id</con:name><con:value>d8f53409a7fe7e9b7d24749f40c96629</con:value></con:property><con:property><con:name>sms-api-secret</con:name><con:value>emNupw0YEVQa3W4y</con:value></con:property><con:property><con:name>sms-api-key</con:name><con:value>6a382b96</con:value></con:property><con:property><con:name>full_name</con:name><con:value>Joy Alvarez</con:value></con:property><con:property><con:name>SMS-Message-ID</con:name><con:value>15000000E7C4D583</con:value></con:property><con:property><con:name>Test-Control</con:name><con:value>START</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>project-home</con:name><con:value>C:\tools\soapui\</con:value></con:property><con:property><con:name>prop-file</con:name><con:value>demo.properties</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
